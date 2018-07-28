@@ -1,0 +1,14 @@
+doctype html
+html
+  head
+    title #{title}
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+  body
+    .container.text-center
+      .row
+          -if(msg)
+            if (msg.status == 'ERROR')
+              .alert.alert-danger !{ msg.status + " : " + msg.txt }
+            else
+              .alert.alert-success !{ msg.status + " : " + msg.txt }
+    block content

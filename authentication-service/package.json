@@ -1,0 +1,24 @@
+{
+  "name": "auth-service-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "inspect": "forever -w -v -c 'node --inspect' ./index.js -t 20 -d 'ssl' 3000"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^1.0.3",
+    "body-parser": "^1.18.2",
+    "express": "^4.15.5",
+    "jsonwebtoken": "^8.1.0",
+    "minimist": "^1.2.0",
+    "mongo": "^0.1.0"
+  },
+  "devDependencies": {
+    "forever": "^0.15.3"
+  }
+}

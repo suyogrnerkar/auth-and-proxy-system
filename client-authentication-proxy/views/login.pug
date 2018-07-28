@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  .main.container
+    .row
+      .col-md-6.col-md-offset-5
+        h1.display-4.m-b-2 Log In
+      .col-md-6.col-md-offset-3
+        form(method='POST' action='/')
+          div.form-group
+            label(for='email') Email
+            input#email.form-control(type='email', placeholder='johnd@email.com', name='email', +
+              value=(msg ? msg.email : ''))
+          div.form-group
+            label(for='password') Password
+            input.form-control(type='password', id='password', placeholder='password', name='password')
+          div.form-group  
+            button.btn.btn-primary(type='submit') Log in 
+      .row
+        .col-md-6.col-md-offset-5 
+          br/  
+          a.btn.btn-info(href='/signup') Sign up / Register

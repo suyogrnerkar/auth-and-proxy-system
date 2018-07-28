@@ -1,0 +1,24 @@
+{
+  "name": "client-authentication-proxy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "inspect": "forever -w -v -c 'node --inspect=9999' ./index.js -d 'ssl' 3001 'https://localhost:3000'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.17.1",
+    "body-parser": "^1.18.2",
+    "client-sessions": "^0.8.0",
+    "express": "^4.15.5",
+    "minimist": "^1.2.0",
+    "pug": "^2.0.0-rc.4"
+  },
+  "devDependencies": {
+    "forever": "^0.15.3"
+  }
+}

@@ -1,0 +1,32 @@
+extends layout
+
+block content
+  .main.container
+    .row
+      .col-md-6.col-md-offset-3
+        h1.display-4.m-b-2 Sign Up / Register
+
+        form(method='POST' action='/signup')
+          div.form-group
+            label(for='firstName') First Name:
+            input#name.form-control(type='text', placeholder='John', name='firstName', +
+            value=((msg && (msg.firstName != "")) ? msg.firstName : "" ))
+          div.form-group
+            label(for='lastName') Last Name:
+            input#name.form-control(type='text', placeholder='Doe', name='lastName', +
+            value=((msg && (msg.lastName != "")) ? msg.lastName : "" ))
+          div.form-group
+            label(for='email') Email:
+            input#email.form-control(type='email', placeholder='johnd@email.com', name='email', +
+              value=(msg && msg.email ? msg.email : ''))
+          div.form-group
+            label(for='pw') Password:
+            input#pw.form-control(type='password' name='password')
+          div.form-group
+            label(for='pw2') Confirm Password:
+            input#pw2.form-control(type='password' name='confirmPassword')
+          button.btn.btn-primary(type='submit') Sign up / Register
+    .row
+        .col-md-6.col-md-offset-5 
+          br/  
+          a.btn.btn-info(href='/') Go to Login

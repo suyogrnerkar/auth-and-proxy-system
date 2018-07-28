@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  .container
+    .row
+      .col-md-6.col-md-offset-3
+        h1 Welcome, 
+        h3 First Name : !{ msg.firstName }
+        h3 Last Name  : !{ msg.lastName }
+    .row
+      .col-md-6.col-md-offset-3
+        br/  
+        a.btn.btn-info(href='/logout') Logout
